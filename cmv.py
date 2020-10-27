@@ -37,9 +37,12 @@ r, pc, aS, aB =  smt.multipletests(list(df['p-value']), alpha=0.05,            #
 df['p-value_adjust'] = pc
 
 
-df_finish = df.sort_values('p-value_adjust', kind='mergesort')
+df_finish = df.sort_values('p-value', kind='mergesort')
 df_finish.index.name = 'cdr3aa'
-df_finish = df_finish.round(5)
+#df_finish = df_finish.round(8)
 #df_finish = df_finish.set_index('cdr3aa')
 
-df_finish.to_csv('cmv_pv.txt')
+#df_finish.to_csv('cmv_pv(2).txt')
+
+
+print('Whoaaaaa!')
